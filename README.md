@@ -1,7 +1,7 @@
 # Vehicle-Recognition-System-Using-the-Stanford-Cars-Dataset
 This project aims to identify and recognise a car’s model given its image.
 
-[Link text]Dataset link: https://pytorch.org/vision/main/generated/torchvision.datasets.StanfordCars.html
+Dataset link: https://pytorch.org/vision/main/generated/torchvision.datasets.StanfordCars.html
 
 ## Pytorch Project
 
