@@ -28,6 +28,7 @@ This project aims to identify and recognize a car’s model given its image. Usi
 
 ### Dataset
 The Stanford Cars dataset consists of images of 196 classes of cars. The dataset is divided into a training set and a testing set, with labels indicating the car class for each image.
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/b231c109-072a-41a7-b818-d0cd33ee3456">
 
 ## Challenge in Preparing Dataset
 The Stanford Cars dataset's original link is broken, so it couldn't be imported directly into PyTorch. Hence, I found the dataset on Kaggle and downloaded it onto my machine. I then wrote a custom dataset class to load the data in the PyTorch format.
@@ -36,7 +37,8 @@ The Stanford Cars dataset's original link is broken, so it couldn't be imported 
 I used GoogLeNet’s transformation to resize and augment the images. This helped in getting more diverse data.
 
 ### Results After Transformation
-*Include transformation results here.*
+<img width="554" alt="image" src="https://github.com/user-attachments/assets/dac006fe-fbb5-4865-9776-87437af6443d">
+
 
 ## Models and Training
 
@@ -44,13 +46,15 @@ I used GoogLeNet’s transformation to resize and augment the images. This helpe
 The first model I used is a pretrained GoogLeNet model for image classification. I changed the last layer to output the number of classes in the Stanford Cars dataset. I trained for 5 epochs on a Google Colab GPU.
 
 #### Results
-*Include results here.*
+<img width="505" alt="image" src="https://github.com/user-attachments/assets/651a3661-8296-4e7e-a182-84f4c3738958">
+
 
 ### Simple CNN Classification Model
 I trained a simple convolutional neural network with few layers for 10 epochs.
 
 #### Results
-*Include results here.*
+<img width="553" alt="image" src="https://github.com/user-attachments/assets/fd9b6971-ad2f-4297-90a3-89e6e0e7b6ca">
+
 
 ### Conclusion
 It can be seen that the prediction is always GMC Canyon, which is wrong. After exploring this problem, I found that the GMC class had the highest number of training images compared to any other class, hence the model was biased. To avoid this, undersampling should be applied and the model should be trained for a higher number of epochs.
@@ -59,12 +63,16 @@ It can be seen that the prediction is always GMC Canyon, which is wrong. After e
 A more complex classification model with more layers and a greater number of neurons.
 
 #### Results
-*Include results here.*
+<img width="562" alt="image" src="https://github.com/user-attachments/assets/d92e8a35-9512-40a5-b69a-3a7d033b8286">
+
 
 The model has better accuracy than the previous simpler model but still is not accurate. It needs more training time.
 
 ### GoogLeNet Trained on the Entire Data
 I trained GoogLeNet on the entire data instead of a subset. I noticed that the accuracy was increasing in every epoch and the loss was decreasing. This means that the model is converging and learning patterns.
+
+<img width="574" alt="image" src="https://github.com/user-attachments/assets/29fecc8e-b7cf-44ae-9f84-4ab02ea2a953">
+
 
 ## Conclusion and Future Work
 Based on the above analysis and model evaluation, the final conclusion is that models require more complexity and training time and power to improve accuracy. I augmented the training dataset to generate more data, but it took more time to train on the large data, hence I discarded the extra data. 
